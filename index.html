@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosper Okah - OpenSesame Creative Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .links {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            opacity: 0;
+            animation: slideIn 0.6s ease forwards;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.2s; }
+        .section:nth-child(2) { animation-delay: 0.4s; }
+        .section:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .section-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+
+        .section h2 {
+            display: flex;
+            align-items: center;
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .skill-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .skill-card h3 {
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            font-size: 0.95em;
+            color: #666;
+            margin: 0;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            header p { font-size: 1em; }
+            .content { padding: 30px 25px; }
+            .section h2 { font-size: 1.5em; }
+            .section p { font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Prosper Okah</h1>
+            <p>Software Engineering Intern Application</p>
+            <p style="font-size: 1em; margin-top: 10px; opacity: 0.9;">Computer Engineering Student | University of Lagos</p>
+            <div class="links">
+                <a href="https://github.com/Dami99-b" target="_blank">GitHub</a>
+                <a href="https://leetcode.com/damillz" target="_blank">LeetCode</a>
+                <a href="https://www.linkedin.com/in/prosper-okah-150672372" target="_blank">LinkedIn</a>
+                <a href="mailto:prosperoluwadamilare@gmail.com">Email</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2><span class="section-number">1</span>My Career Journey with OpenSesame</h2>
+                <p>
+                    OpenSesame sits at the intersection of two things I care deeply about: <span class="highlight">building scalable technical systems</span> and <span class="highlight">democratizing access to knowledge</span>. 
+                </p>
+                <p>
+                    Long-term, I want to work on infrastructure that has real social impact—systems that help people grow, learn, and unlock opportunities they wouldn't otherwise have. I've seen firsthand how access to quality learning resources can change someone's trajectory, and that's what drives my interest in edtech.
+                </p>
+                <p>
+                    Starting my career at OpenSesame means building AI-powered learning tools while working with modern technologies like TypeScript, React, and AWS. I get both the technical depth I'm seeking—distributed systems, API design, infrastructure automation—and mission-driven work that matters. The chance to learn Extreme Programming practices from experienced engineers while contributing to a platform that reaches learners worldwide is exactly where I want to begin my journey.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-number">2</span>What I Bring to OpenSesame</h2>
+                <p>
+                    I bring a <span class="highlight">systems-thinking mindset</span> and a track record of shipping working code. I've built concurrent systems in Rust, async APIs in Python, and I'm comfortable diving into unfamiliar codebases quickly.
+                </p>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>🔧 Technical Rigor</h3>
+                        <p>Obsessed with correctness—ensuring thread-safety, handling edge cases, and building systems that work under pressure.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>🚀 Shipping Mentality</h3>
+                        <p>Built an MCP server handling 500+ queries with 100% success rate and a URL shortener processing 1,000+ req/sec.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>🌍 Remote Collaboration</h3>
+                        <p>Experienced working in distributed teams through open-source communities and virtual engineering groups.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>📚 Continuous Learning</h3>
+                        <p>Self-taught Rust in days, constantly exploring new technologies and approaches to solve problems better.</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 25px;">
+                    More importantly, OpenSesame's mission resonates personally with me. I've experienced how access to quality learning resources changes opportunities, and I want to help build the infrastructure that makes upskilling accessible to everyone. Whether it's optimizing CI/CD pipelines, building frontend features, or integrating AI workflows, I'm ready to contribute meaningfully from day one.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-number">3</span>AI and the Future of Learning</h2>
+                <p>
+                    What excites me most about AI in learning is <span class="highlight">personalization at scale</span>. Right now, most online courses are one-size-fits-all, but AI can adapt content to individual learning styles, prior knowledge, and career goals in real-time.
+                </p>
+                <p>
+                    Imagine a platform that doesn't just recommend courses but actively shapes learning pathways based on skill gaps, career objectives, and even how someone learns best. AI could analyze completion rates, quiz performance, and engagement patterns to surface exactly what someone needs next—turning a catalog of 60,000+ courses into a personalized learning journey.
+                </p>
+                <p>
+                    The technical challenge of building systems that intelligently curate massive content libraries while maintaining performance is exactly the kind of problem I want to solve. How do you process millions of data points in real-time? How do you balance algorithmic recommendations with human intuition? How do you ensure AI-powered tools are accessible and fair?
+                </p>
+                <p>
+                    AI won't replace teachers or structured learning—it'll make both more effective. It'll help companies identify skill gaps before they become problems, help employees find the right training without drowning in options, and ultimately make workforce development more efficient and impactful. That's the future I want to help build at OpenSesame.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Thank you for reviewing my application!</strong></p>
+            <p>I'm excited about the opportunity to contribute to OpenSesame's mission and grow as an engineer.</p>
+            <p style="margin-top: 15px;">
+                📧 <a href="mailto:prosperoluwadamilare@gmail.com">prosperoluwadamilare@gmail.com</a> | 
+                📱 +234 814 680 9061
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add intersection observer for animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+  </html>
